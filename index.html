@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!-- Consider specifying the language of your content by adding the `lang` attribute to <html> -->
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+    <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+        <title>JEB Prototype PhoneGap</title>
+        <meta name="jebPPG" content="JEB Prototype PhoneGap site">
+
+        <!-- Mobile viewport optimized: h5bp.com/viewport -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-touch-fullscreen" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<!--
+        <link rel="stylesheet" href="css/main.css" />
+        <link rel="stylesheet" href="css/jeb.css" />
+        <link rel="shortcut icon" href="favicon.ico" />
+-->
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
+        <!-- More ideas for your <head> here: h5bp.com/d/head-Tips -->
+    </head>
+    <body>
+        <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you support IE 6.
+        chromium.org/developers/how-tos/chrome-frame-getting-started -->
+        <!--[if lt IE 7]><p class="chromeframe">Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
+
+        <!-- Add your site or application content here -->
+
+        <!-- PAGE HEADER -->
+        <div id='jebBody' class='jebBody linearBg'>
+<!--
+                <div id='jeb-LoadMsg' class='jebPanel jeb-LoadMsg hidden'>
+                A large short message box
+            </div>
+            <div id='jeb-Info' class='jebPanel jeb-Info hidden'>
+                Appropriate for displays of content that either wrap around or require multiple lines
+            </div>
+            <div id='jeb-Canvas' class='jebPanel jeb-Canvas hidden'>
+                Area for graphics or tables
+            </div>
+            <div id='jeb-Table' class='jebPanel jeb-Table hidden'>
+                <table>
+                    <tr>
+                        <th>Col A</th><th>Col B</th><th>Col C</th><th>Col D</th>
+                    </tr>
+                    <tr>
+                        <th>apple</th><th>orange</th><th>banana</th><th>plum</th>
+                    </tr>
+                    <tr>
+                        <th>bear</th><th>eagle</th><th>cow</th><th>dog</th>
+                    </tr>
+                    <tr>
+                        <th>aluminum</th><th>iron</th><th>helium</th><th>nickel</th>
+                    </tr>
+                </table>
+            </div>
+        -->
+            <div id='jeb-header'>
+                JEB Header shared across all pages
+            </div>
+
+            <!-- CONTENT PAGES ARE IN THIS DIV -->
+            <div id='jebContent'>
+                <table >
+                    <tr>
+                        <td id='jeb-home' class='jebPage'><!-- PAGE:  HOME -->
+                        <div class='jeb-head'>
+                            Intro text for this JEB prototype home page
+                        </div>
+</td>
+                        <!-- RIGHT NAV BAR --  shared by all pages -->
+                        <td class='jebNav jebPanels size8 jebButton'><a jebPanel="jeb-LoadMsg">LoadMsg</a>
+                        <br>
+                        <a jebPanel="jeb-Info">Info</a>
+                        <br>
+                        <a jebPanel="jeb-Canvas">Canvas</a>
+                        <br>
+                        <a jebPanel="jeb-Table">Table</a></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <!-- PAGE FOOTER -- shared by all pages -->
+        <div class="jebBodyEnd"></div>
+        <div id='jeb-footer' class="jebFoot jebLinks">
+            <table>
+                <tr>
+                    <td><a jebPage="jeb-home">Home</a></td><td>|</td>
+                    <td><a jebPage="jeb-aboutus">About Us</a></td><td>|</td>
+                    <td><a jebPage="jeb-test">Test</a></td><td>|</td>
+                    <td><a jebPage="jeb-other">Other</a></td><td>|</td>
+                </tr>
+            </table>
+        </div>
+        <!-- JavaScript at the bottom for fast page loading: http://developer.yahoo.com/performance/rules.html#js_bottom -->
+
+        <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
+<!--        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+        <script>
+            window.jQuery || document.write('<script src="js/vendor/jquery-1.7.2.min.js"><\/script>')
+        </script>
+-->
+        <!-- scripts concatenated and minified via build script -->
+<!--        
+        <script src="js/plugins.js"></script>
+        <script src="js/jeb.js"></script>
+-->
+        <!-- end scripts -->
+    </body>
+</html>

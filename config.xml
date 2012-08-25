@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+    <widget xmlns = "http://www.w3.org/ns/widgets"
+        xmlns:gap = "http://phonegap.com/ns/1.0"
+        id        = "com.villaduvin.jebPPG"
+        versionCode = "1"
+        version   = "0.1">
+
+    <!-- versionCode is optional and Android only -->
+
+    <name>jebPPG</name>
+
+    <description>
+        Prototype PhoneGap html5 app by gene ball 
+    </description>
+
+    <author href="http://villaduvin.com" email="geneball@gmail.com">
+        Gene Ball 
+    </author>
+
+	<icon src="icon.png" gap:role="default" />
+
+	<feature name="http://api.phonegap.com/1.0/geolocation"/>
+	<feature name="http://api.phonegap.com/1.0/network"/>
+
+	<preference name="orientation" value="portrait" />
+</widget>
