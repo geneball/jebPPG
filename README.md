@@ -1,0 +1,4 @@
+jebPPG
+======
+
+minimalist PhoneGap prototype
