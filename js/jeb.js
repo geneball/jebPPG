@@ -93,20 +93,20 @@ var JEB = {
         var phoneName = navigator.appName;
         var platform = navigator.platform;
         if (window.device) {
-            var phoneName = window.device.name;
-            var platform = window.device.platform;
+            phoneName = window.device.name;
+            platform = window.device.platform;
         }
         var w = window.innerWidth;
         var h = window.innerHeight;
         User.Inner = w + 'x' + h;
         $("#jeb-header").text("{0} on {1}  {2}w x {3}h ".format(phoneName, platform, w, h));
-        $('#jeb-Canvas').css({
-            position : 'absolute',
-            top : '0px',
-            left : '0px',
-            width : w.toString() + 'px',
-            height : h.toString() + 'px'
-        });
+        // $('#jeb-Canvas').css({
+            // position : 'absolute',
+            // top : '0px',
+            // left : '0px',
+            // width : w.toString() + 'px',
+            // height : h.toString() + 'px'
+        // });
 
         var devw = window.screen.width;
         var devh = window.screen.height;
@@ -145,19 +145,19 @@ var JEB = {
         // Evo/Android NAV (menu hdrs off & scrolled): P 369x615 L 615x369
         // Evo/XScope NAV (menu hdrs off): AH P 320x533 t139  L 533x320 t180
 
-        //        var screen = (devh < devw) ? "Landscape" : "Portrait";
-        //        var mindim = (devh < devw) ? devh : devw;
-        //        var sizes = [320, 480, 540, 600, 800, 10000];
-        //        for (var i = 0; i < sizes.length; i++) {
-        //            if (mindim <= sizes[i]) {
-        //                screen += sizes[i];
-        //                break;
-        //            }
-        //        }
+               var screen = (devh < devw) ? "Landscape" : "Portrait";
+               var mindim = (devh < devw) ? devh : devw;
+               var sizes = [320, 480, 540, 600, 800, 10000];
+               for (var i = 0; i < sizes.length; i++) {
+                   if (mindim <= sizes[i]) {
+                       screen += sizes[i];
+                       break;
+                   }
+               }
         // $("#jeb-header").text("{0} {1}w x {2}h mapped to {3}w x {4}h ".format(screen, devw, devh, w, h));
-        // var p = this.panels[screen];
-        // for (var i in p)
-        // $(i).css(p[i]);
+        var p = this.panels[screen];
+        for (var i in p)
+        $(i).css(p[i]);
     },
     onTouchClick : function(sel, body) {
         $(sel).on('touchstart click', 'a', function(event) {
